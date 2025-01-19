@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh70m8q2tl51x"]
+
+[ext_resource type="PackedScene" uid="uid://bo3jffjax3ra5" path="res://Assets/Art/Player/PlayerCharacter01.glb" id="1_sh1kf"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/Player/TextureAtlasShader.tres" id="2_fb1dg"]
+[ext_resource type="Script" path="res://addons/jigglebones/jigglebone.gd" id="2_myxn5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_frw04"]
+render_priority = 0
+shader = ExtResource("2_fb1dg")
+shader_parameter/Albedo = null
+
+[node name="PlayerCharacter01" instance=ExtResource("1_sh1kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="GeneralSkeleton" parent="Armature" index="0"]
+unique_name_in_owner = false
+
+[node name="Cube" parent="Armature/GeneralSkeleton" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_frw04")
+
+[node name="Jigglebone" type="Node3D" parent="Armature/GeneralSkeleton" index="1"]
+transform = Transform3D(1, 4.73487e-11, 2.38356e-07, -6.1999e-15, 1, -0.000198621, -2.38356e-07, 0.000198621, 1, -2.38418e-07, 0.755856, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Head"
+
+[node name="Jigglebone2" type="Node3D" parent="Armature/GeneralSkeleton" index="2"]
+transform = Transform3D(1, 4.95587e-11, 2.38419e-07, 1.38778e-17, 1, -0.000207864, -2.38419e-07, 0.000207864, 1, -2.38418e-07, 0.940573, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Head.001"
+
+[node name="Jigglebone3" type="Node3D" parent="Armature/GeneralSkeleton" index="3"]
+transform = Transform3D(0.638703, 0.769453, -1.05071e-05, -0.769453, 0.638703, 8.03899e-06, 1.28965e-05, 2.95017e-06, 1, 0.641074, 0.43451, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Arms_01.l"
+
+[node name="Jigglebone4" type="Node3D" parent="Armature/GeneralSkeleton" index="4"]
+transform = Transform3D(0.638703, 0.769453, -0.000107225, -0.769453, 0.638703, -8.90768e-05, -5.53991e-08, 0.000139398, 1, 0.85987, 0.616128, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Arms_02.l"
+
+[node name="Jigglebone5" type="Node3D" parent="Armature/GeneralSkeleton" index="5"]
+transform = Transform3D(0.638703, -0.769453, 1.08867e-05, 0.769453, 0.638703, 8.40396e-06, -1.34198e-05, 3.00916e-06, 1, -0.641074, 0.43451, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Arms_01.r"
+
+[node name="Jigglebone6" type="Node3D" parent="Armature/GeneralSkeleton" index="6"]
+transform = Transform3D(0.638703, -0.769453, 0.000101981, 0.769453, 0.638703, -8.45705e-05, -6.27915e-08, 0.000132485, 1, -0.859871, 0.616128, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Arms_02.r"
+
+[node name="Jigglebone7" type="Node3D" parent="Armature/GeneralSkeleton" index="7"]
+transform = Transform3D(5.96046e-08, -0.744649, 0.667456, 1.49012e-07, -0.667457, -0.744649, 1, 1.49012e-07, 5.96046e-08, -1.30853, 0.31014, -7.94541e-07)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Legs_01.r"
+
+[node name="Jigglebone8" type="Node3D" parent="Armature/GeneralSkeleton" index="8"]
+transform = Transform3D(-0.471962, -0.74465, 0.471962, 0.526547, -0.667455, -0.526547, 0.707106, 2.38419e-07, 0.707107, -0.823392, -0.597929, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Legs_02.r"
+
+[node name="Jigglebone9" type="Node3D" parent="Armature/GeneralSkeleton" index="9"]
+transform = Transform3D(8.34465e-06, 0.744652, -0.667453, 9.08971e-06, -0.667453, -0.744652, -1, 1.49012e-07, -1.22786e-05, 1.30853, 0.31014, -9.33994e-07)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Legs_01.l"
+
+[node name="Jigglebone10" type="Node3D" parent="Armature/GeneralSkeleton" index="10"]
+transform = Transform3D(-0.471962, 0.74465, -0.471962, -0.526547, -0.667455, -0.526546, -0.707106, 8.9407e-08, 0.707107, 0.823392, -0.597929, -1)
+top_level = true
+script = ExtResource("2_myxn5")
+bone_name = "Legs_02.l"
