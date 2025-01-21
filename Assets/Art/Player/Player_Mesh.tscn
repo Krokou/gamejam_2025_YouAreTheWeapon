@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh70m8q2tl51x"]
+[gd_scene load_steps=6 format=3 uid="uid://bh70m8q2tl51x"]
 
 [ext_resource type="PackedScene" uid="uid://bo3jffjax3ra5" path="res://Assets/Art/Player/PlayerCharacter01.glb" id="1_sh1kf"]
 [ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/Player/TextureAtlasShader.tres" id="2_fb1dg"]
 [ext_resource type="Script" path="res://addons/jigglebones/jigglebone.gd" id="2_myxn5"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/Player/TextureAtlas_NEW.png" id="3_x3ru3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_frw04"]
 render_priority = 0
 shader = ExtResource("2_fb1dg")
-shader_parameter/Albedo = null
+shader_parameter/Albedo = ExtResource("3_x3ru3")
 
 [node name="PlayerCharacter01" instance=ExtResource("1_sh1kf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="GeneralSkeleton" parent="Armature" index="0"]
 unique_name_in_owner = false
@@ -19,13 +19,13 @@ unique_name_in_owner = false
 surface_material_override/0 = SubResource("ShaderMaterial_frw04")
 
 [node name="Jigglebone" type="Node3D" parent="Armature/GeneralSkeleton" index="1"]
-transform = Transform3D(1, 4.73487e-11, 2.38356e-07, -6.1999e-15, 1, -0.000198621, -2.38356e-07, 0.000198621, 1, -2.38418e-07, 0.755856, -1)
+transform = Transform3D(1, 4.73487e-11, 2.38356e-07, -6.1999e-15, 1, -0.000198621, -2.38356e-07, 0.000198621, 1, -2.38419e-07, 0.755856, -1)
 top_level = true
 script = ExtResource("2_myxn5")
 bone_name = "Head"
 
 [node name="Jigglebone2" type="Node3D" parent="Armature/GeneralSkeleton" index="2"]
-transform = Transform3D(1, 4.95587e-11, 2.38419e-07, 1.38778e-17, 1, -0.000207864, -2.38419e-07, 0.000207864, 1, -2.38418e-07, 0.940573, -1)
+transform = Transform3D(1, 4.95587e-11, 2.38419e-07, 1.38778e-17, 1, -0.000207864, -2.38419e-07, 0.000207864, 1, -2.38419e-07, 0.940573, -1)
 top_level = true
 script = ExtResource("2_myxn5")
 bone_name = "Head.001"
@@ -37,7 +37,7 @@ script = ExtResource("2_myxn5")
 bone_name = "Arms_01.l"
 
 [node name="Jigglebone4" type="Node3D" parent="Armature/GeneralSkeleton" index="4"]
-transform = Transform3D(0.638703, 0.769453, -0.000107225, -0.769453, 0.638703, -8.90768e-05, -5.53991e-08, 0.000139398, 1, 0.85987, 0.616128, -1)
+transform = Transform3D(0.638703, 0.769453, -0.000107225, -0.769453, 0.638703, -8.90768e-05, -5.53991e-08, 0.000139398, 1, 0.85987, 0.616127, -1)
 top_level = true
 script = ExtResource("2_myxn5")
 bone_name = "Arms_02.l"
@@ -49,7 +49,7 @@ script = ExtResource("2_myxn5")
 bone_name = "Arms_01.r"
 
 [node name="Jigglebone6" type="Node3D" parent="Armature/GeneralSkeleton" index="6"]
-transform = Transform3D(0.638703, -0.769453, 0.000101981, 0.769453, 0.638703, -8.45705e-05, -6.27915e-08, 0.000132485, 1, -0.859871, 0.616128, -1)
+transform = Transform3D(0.638703, -0.769453, 0.000101981, 0.769453, 0.638703, -8.45705e-05, -6.27915e-08, 0.000132485, 1, -0.859871, 0.616127, -1)
 top_level = true
 script = ExtResource("2_myxn5")
 bone_name = "Arms_02.r"
@@ -61,7 +61,7 @@ script = ExtResource("2_myxn5")
 bone_name = "Legs_01.r"
 
 [node name="Jigglebone8" type="Node3D" parent="Armature/GeneralSkeleton" index="8"]
-transform = Transform3D(-0.471962, -0.74465, 0.471962, 0.526547, -0.667455, -0.526547, 0.707106, 2.38419e-07, 0.707107, -0.823392, -0.597929, -1)
+transform = Transform3D(0.000160098, -0.74465, 0.667455, -0.000178516, -0.667455, -0.74465, 1, 8.9407e-08, -0.000239849, -1.49085, 0.146721, -5.86167e-07)
 top_level = true
 script = ExtResource("2_myxn5")
 bone_name = "Legs_02.r"
@@ -73,7 +73,7 @@ script = ExtResource("2_myxn5")
 bone_name = "Legs_01.l"
 
 [node name="Jigglebone10" type="Node3D" parent="Armature/GeneralSkeleton" index="10"]
-transform = Transform3D(-0.471962, 0.74465, -0.471962, -0.526547, -0.667455, -0.526546, -0.707106, 8.9407e-08, 0.707107, 0.823392, -0.597929, -1)
+transform = Transform3D(0.000167072, 0.74465, -0.667455, 0.000186264, -0.667455, -0.74465, -1, 5.96046e-08, -0.000250101, 1.49085, 0.146721, -6.87282e-07)
 top_level = true
 script = ExtResource("2_myxn5")
 bone_name = "Legs_02.l"

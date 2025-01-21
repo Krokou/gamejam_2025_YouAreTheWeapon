@@ -1,0 +1,45 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bhmfjjwk28ypq"
+path="res://.godot/imported/PigCharacter01.glb-37ce0bf5a69e9f1a665edcb1a7f75b5f.scn"
+
+[deps]
+
+source_file="res://Assets/Art/Enemies/Pig/PigCharacter01.glb"
+dest_files=["res://.godot/imported/PigCharacter01.glb-37ce0bf5a69e9f1a665edcb1a7f75b5f.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Armature/Skeleton3D": {
+"rest_pose/external_animation_library": null,
+"retarget/bone_map": Object(BoneMap,"resource_local_to_scene":false,"resource_name":"SK_Pig","profile":Object(SkeletonProfile,"resource_local_to_scene":false,"resource_name":"","root_bone":&"","scale_base_bone":&"","group_size":0,"bone_size":0,"script":null)
+,"bonemap":null,"script":null)
+
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
