@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckg0ugfpvrgm8"]
+
+[ext_resource type="PackedScene" uid="uid://b0q0srca656ge" path="res://Assets/Art/Enemies/Penguin/PenguinCharacter01.glb" id="1_2hvot"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/Player/TextureAtlasShader.tres" id="2_04471"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/Player/TextureAtlas_NEW.png" id="3_b88rb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2xmnd"]
+render_priority = 0
+shader = ExtResource("2_04471")
+shader_parameter/Albedo = ExtResource("3_b88rb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tuvlk"]
+render_priority = 0
+shader = ExtResource("2_04471")
+shader_parameter/Albedo = ExtResource("3_b88rb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s583u"]
+render_priority = 0
+shader = ExtResource("2_04471")
+shader_parameter/Albedo = ExtResource("3_b88rb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w4thx"]
+render_priority = 0
+shader = ExtResource("2_04471")
+shader_parameter/Albedo = ExtResource("3_b88rb")
+
+[node name="PenguinCharacter01" instance=ExtResource("1_2hvot")]
+
+[node name="Sword_Pengin" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.964924, 0.0289744, -0.260927, -0.10488, 0.953679, -0.281952, 0.240671, 0.299427, 0.923265, -0.202491, 0.3321, -0.015212)
+
+[node name="Sword_Pengin" parent="Armature/Skeleton3D/Sword_Pengin" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_2xmnd")
+
+[node name="Eyes" parent="Armature/Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_tuvlk")
+
+[node name="Hat" parent="Armature/Skeleton3D" index="2"]
+surface_material_override/0 = SubResource("ShaderMaterial_s583u")
+
+[node name="Penguin" parent="Armature/Skeleton3D" index="3"]
+surface_material_override/0 = SubResource("ShaderMaterial_w4thx")
