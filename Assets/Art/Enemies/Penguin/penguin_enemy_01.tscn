@@ -1,13 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckg0ugfpvrgm8"]
 
-[ext_resource type="PackedScene" uid="uid://b0q0srca656ge" path="res://Assets/Art/Enemies/Penguin/PenguinCharacter01.glb" id="1_2hvot"]
-[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/Player/TextureAtlasShader.tres" id="2_04471"]
-[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/Player/TextureAtlas_NEW.png" id="3_b88rb"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2xmnd"]
-render_priority = 0
-shader = ExtResource("2_04471")
-shader_parameter/Albedo = ExtResource("3_b88rb")
+[ext_resource type="PackedScene" uid="uid://crd2h75q2o1wo" path="res://Assets/Art/Enemies/Penguin/PenguinCharacter01.glb" id="1_2hvot"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_04471"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_b88rb"]
+[ext_resource type="PackedScene" uid="uid://dwh743urf6nop" path="res://Assets/Art/Weapons/Sword_01/sword_01.tscn" id="4_4hfcc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tuvlk"]
 render_priority = 0
@@ -26,17 +22,47 @@ shader_parameter/Albedo = ExtResource("3_b88rb")
 
 [node name="PenguinCharacter01" instance=ExtResource("1_2hvot")]
 
-[node name="Sword_Pengin" parent="Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.964924, 0.0289744, -0.260927, -0.10488, 0.953679, -0.281952, 0.240671, 0.299427, 0.923265, -0.202491, 0.3321, -0.015212)
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, 0.14074, -0.100865)
+bones/0/rotation = Quaternion(0.254339, -0.0627015, 0.016527, 0.964939)
+bones/1/rotation = Quaternion(-0.00591456, 0.000540032, 0.0027992, 0.999978)
+bones/2/rotation = Quaternion(-0.0321286, 0.0527455, -0.0194371, 0.997902)
+bones/3/rotation = Quaternion(-0.0767358, -4.28622e-10, -1.93131e-08, 0.997051)
+bones/4/rotation = Quaternion(0.131111, 7.53512e-10, 3.08892e-08, 0.991368)
+bones/5/rotation = Quaternion(-0.035386, 2.07964e-10, -9.14297e-09, 0.999374)
+bones/6/rotation = Quaternion(0.811171, 0.0818364, 0.0209043, 0.578678)
+bones/7/rotation = Quaternion(-0.276122, 0.226602, 0.409398, 0.839525)
+bones/8/rotation = Quaternion(0.1481, -0.00704636, 0.0416476, 0.98807)
+bones/9/rotation = Quaternion(0.0571447, -0.00660465, 0.0274297, 0.997967)
+bones/10/rotation = Quaternion(0.960645, -0.254986, 0.0215543, -0.10807)
+bones/11/rotation = Quaternion(0.150152, -0.0253553, -0.181806, 0.971472)
+bones/12/rotation = Quaternion(0.155695, -0.0519078, -0.168908, 0.971872)
+bones/13/rotation = Quaternion(0.0726826, -0.0763316, -0.14008, 0.984514)
+bones/14/rotation = Quaternion(0.991257, 0.0485202, 0.0682624, -0.101955)
+bones/15/rotation = Quaternion(0.10049, 0.0570471, -0.0613152, 0.991407)
+bones/16/rotation = Quaternion(0.186478, 0.0371872, -0.0750402, 0.978883)
+bones/17/rotation = Quaternion(0.115899, 0.0129521, -0.0827416, 0.989724)
+bones/18/rotation = Quaternion(0.864311, -0.100716, -0.00349421, 0.492758)
+bones/19/rotation = Quaternion(0.302184, 0.00982126, -0.029728, 0.952735)
+bones/20/rotation = Quaternion(-0.553801, 0.0787251, -0.0918085, 0.823819)
+bones/21/rotation = Quaternion(-0.232647, -5.89062e-08, -0.0256039, 0.972224)
+bones/22/rotation = Quaternion(0.996694, 0.0593347, -0.0522209, 0.0188023)
+bones/23/rotation = Quaternion(0.183731, -0.000477811, 0.0311317, 0.982483)
+bones/24/rotation = Quaternion(-0.715919, 0.00149509, 0.0975041, 0.691339)
+bones/25/rotation = Quaternion(-0.302525, 5.28526e-08, 0.0332944, 0.95256)
 
-[node name="Sword_Pengin" parent="Armature/Skeleton3D/Sword_Pengin" index="0"]
-surface_material_override/0 = SubResource("ShaderMaterial_2xmnd")
-
-[node name="Eyes" parent="Armature/Skeleton3D" index="1"]
+[node name="Eyes" parent="Armature/Skeleton3D" index="0"]
 surface_material_override/0 = SubResource("ShaderMaterial_tuvlk")
 
-[node name="Hat" parent="Armature/Skeleton3D" index="2"]
+[node name="Hat" parent="Armature/Skeleton3D" index="1"]
 surface_material_override/0 = SubResource("ShaderMaterial_s583u")
 
-[node name="Penguin" parent="Armature/Skeleton3D" index="3"]
+[node name="Penguin" parent="Armature/Skeleton3D" index="2"]
 surface_material_override/0 = SubResource("ShaderMaterial_w4thx")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.827614, 0.52576, -0.196544, 0.365675, -0.239385, 0.89943, 0.425836, -0.816252, -0.390375, -0.208672, 0.460117, -0.0960476)
+bone_name = "Wings_04.r"
+bone_idx = 13
+
+[node name="Sword2" parent="Armature/Skeleton3D/BoneAttachment3D" index="0" instance=ExtResource("4_4hfcc")]

@@ -44,11 +44,10 @@ void light() {
 
 }
 "
-graph_offset = Vector2(-761.291, 27.8188)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture2DParameter_kwo71")
-nodes/fragment/3/position = Vector2(-840, 160)
+nodes/fragment/3/position = Vector2(-1080, 100)
 nodes/fragment/4/node = SubResource("VisualShaderNodeTexture_fkxex")
-nodes/fragment/4/position = Vector2(-420, 160)
+nodes/fragment/4/position = Vector2(-700, 100)
 nodes/fragment/connections = PackedInt32Array(3, 0, 4, 2, 4, 0, 0, 0)
 nodes/light/3/node = SubResource("VisualShaderNodeInput_fjeui")
 nodes/light/3/position = Vector2(-840, 160)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwh743urf6nop"]
 
-[ext_resource type="PackedScene" uid="uid://cjryreqc6ohlp" path="res://Assets/Art/Weapons/Sword_01/Sword.glb" id="1_qlc0u"]
-[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/Player/TextureAtlasShader.tres" id="2_ky5x2"]
-[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/Player/TextureAtlas_NEW.png" id="3_vljqt"]
+[ext_resource type="PackedScene" uid="uid://du1232sa71jnm" path="res://Assets/Art/Weapons/Sword_01/Sword.glb" id="1_qlc0u"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_ky5x2"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_vljqt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n05sl"]
 render_priority = 0

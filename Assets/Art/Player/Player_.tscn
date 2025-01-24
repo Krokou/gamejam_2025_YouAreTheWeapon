@@ -11,4 +11,3 @@ radius = 0.864405
 shape = SubResource("SphereShape3D_mx5gp")
 
 [node name="PlayerMesh" parent="." instance=ExtResource("1_2l31a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
