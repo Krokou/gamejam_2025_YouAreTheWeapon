@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb5y0ukhan467"]
+
+[ext_resource type="PackedScene" uid="uid://dxd2js2rygqo7" path="res://Assets/Art/Weapons/AK_47/GUN_AK.glb" id="1_cpfjk"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/Player/TextureAtlasShader.tres" id="2_0mhn5"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/Player/TextureAtlas_NEW.png" id="3_cxoym"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d1ypb"]
+render_priority = 0
+shader = ExtResource("2_0mhn5")
+shader_parameter/Albedo = ExtResource("3_cxoym")
+
+[node name="GUN_AK" instance=ExtResource("1_cpfjk")]
+
+[node name="GUN_AK47" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_d1ypb")
