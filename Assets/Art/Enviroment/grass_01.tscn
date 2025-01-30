@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxor1joxvagp3"]
+
+[ext_resource type="PackedScene" uid="uid://bvu5vxabrtrnx" path="res://Assets/Art/Enviroment/Grass_01.glb" id="1_yri2e"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_rp7kc"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_x07pg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_clngv"]
+render_priority = 0
+shader = ExtResource("2_rp7kc")
+shader_parameter/Albedo = ExtResource("3_x07pg")
+
+[node name="Grass_012" instance=ExtResource("1_yri2e")]
+
+[node name="Grass_01" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_clngv")

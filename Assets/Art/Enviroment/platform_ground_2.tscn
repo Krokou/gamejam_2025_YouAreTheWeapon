@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsq3fwijnrohg"]
+
+[ext_resource type="PackedScene" uid="uid://c51lkypy125qm" path="res://Assets/Art/Enviroment/Platform_Ground.glb" id="1_m3nx5"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_pc8kq"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_ptx7c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30rbo"]
+render_priority = 0
+shader = ExtResource("2_pc8kq")
+shader_parameter/Albedo = ExtResource("3_ptx7c")
+
+[node name="Platform_Ground2" instance=ExtResource("1_m3nx5")]
+
+[node name="Platform_Ground" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_30rbo")

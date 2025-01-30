@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmdskxw6bbaw1"]
+
+[ext_resource type="PackedScene" uid="uid://un118b5ekr06" path="res://Assets/Art/Enviroment/Rock_02.glb" id="1_srg17"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_6cb42"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_euo4d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ggw6f"]
+render_priority = 0
+shader = ExtResource("2_6cb42")
+shader_parameter/Albedo = ExtResource("3_euo4d")
+
+[node name="Rock_022" instance=ExtResource("1_srg17")]
+
+[node name="Rock_02" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_ggw6f")

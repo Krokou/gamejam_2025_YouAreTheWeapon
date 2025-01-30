@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://ic84mc6v5pce"]
+
+[ext_resource type="PackedScene" uid="uid://34pv0pvrbkp" path="res://Assets/Art/Enemies/Eagle/Eagel_Boss.glb" id="1_137ru"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_8mtdv"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_cp6mc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cnqty"]
+render_priority = 0
+shader = ExtResource("2_8mtdv")
+shader_parameter/Albedo = ExtResource("3_cp6mc")
+
+[node name="Eagel_Boss" instance=ExtResource("1_137ru")]
+
+[node name="Eagle_Body" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_cnqty")

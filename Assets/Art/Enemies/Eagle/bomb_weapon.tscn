@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba6csvj512iq2"]
+
+[ext_resource type="PackedScene" uid="uid://ci45yqlwkxj57" path="res://Assets/Art/Enemies/Eagle/Bomb_Weapon.glb" id="1_tji3s"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_vcjcx"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_kromp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t7nnr"]
+render_priority = 0
+shader = ExtResource("2_vcjcx")
+shader_parameter/Albedo = ExtResource("3_kromp")
+
+[node name="Bomb_Weapon" instance=ExtResource("1_tji3s")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_t7nnr")

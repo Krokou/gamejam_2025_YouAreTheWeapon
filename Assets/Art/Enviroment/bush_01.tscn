@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw8uan4rkv0o0"]
+
+[ext_resource type="PackedScene" uid="uid://bu6qtl70bukby" path="res://Assets/Art/Enviroment/Bush_01.glb" id="1_uvqnn"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_1ddps"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_yn8gu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_umrcs"]
+render_priority = 0
+shader = ExtResource("2_1ddps")
+shader_parameter/Albedo = ExtResource("3_yn8gu")
+
+[node name="Bush_012" instance=ExtResource("1_uvqnn")]
+
+[node name="Bush_01" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_umrcs")

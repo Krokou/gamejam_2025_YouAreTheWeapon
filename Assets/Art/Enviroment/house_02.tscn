@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://b76isfwyww25d"]
+
+[ext_resource type="PackedScene" uid="uid://dx3wx8xhreysn" path="res://Assets/Art/Enviroment/House_02.glb" id="1_v0can"]
+[ext_resource type="Shader" uid="uid://bo20dh27t8mls" path="res://Assets/Art/TextureAtlasShader.tres" id="2_ub7d0"]
+[ext_resource type="Texture2D" uid="uid://bekofqinl1uq1" path="res://Assets/Art/TextureAtlas_NEW.png" id="3_t5hlr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_njumk"]
+render_priority = 0
+shader = ExtResource("2_ub7d0")
+shader_parameter/Albedo = ExtResource("3_t5hlr")
+
+[node name="House_022" instance=ExtResource("1_v0can")]
+
+[node name="House_02" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_njumk")
